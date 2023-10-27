@@ -18,4 +18,7 @@ export class MovieDetailsPage implements OnInit {
     this.omdbapi.geById(id).subscribe(result => this.info = result)
   }
 
+  openURL() {
+    window.open(this.info.Website, '_blank')
+  }
 }
